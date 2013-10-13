@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3CD44227180B4B5A00819E46 /* Node.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CD44226180B4B5A00819E46 /* Node.m */; };
+		3CD4422B180B4BD200819E46 /* LinkedList.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CD4422A180B4BD200819E46 /* LinkedList.m */; };
 		3CEFDB26180B4A7200B2B767 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3CEFDB25180B4A7200B2B767 /* Foundation.framework */; };
 		3CEFDB28180B4A7200B2B767 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3CEFDB27180B4A7200B2B767 /* CoreGraphics.framework */; };
 		3CEFDB2A180B4A7200B2B767 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3CEFDB29180B4A7200B2B767 /* UIKit.framework */; };
@@ -32,6 +34,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		3CD44225180B4B5A00819E46 /* Node.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Node.h; path = ../Node.h; sourceTree = "<group>"; };
+		3CD44226180B4B5A00819E46 /* Node.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Node.m; path = ../Node.m; sourceTree = "<group>"; };
+		3CD44229180B4BD200819E46 /* LinkedList.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LinkedList.h; sourceTree = "<group>"; };
+		3CD4422A180B4BD200819E46 /* LinkedList.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LinkedList.m; sourceTree = "<group>"; };
 		3CEFDB22180B4A7200B2B767 /* ios-linked-list.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ios-linked-list.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3CEFDB25180B4A7200B2B767 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		3CEFDB27180B4A7200B2B767 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -74,6 +80,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3CD44228180B4BB600819E46 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				3CD44225180B4B5A00819E46 /* Node.h */,
+				3CD44226180B4B5A00819E46 /* Node.m */,
+				3CD44229180B4BD200819E46 /* LinkedList.h */,
+				3CD4422A180B4BD200819E46 /* LinkedList.m */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
 		3CEFDB19180B4A7200B2B767 = {
 			isa = PBXGroup;
 			children = (
@@ -107,6 +124,7 @@
 		3CEFDB2B180B4A7200B2B767 /* ios-linked-list */ = {
 			isa = PBXGroup;
 			children = (
+				3CD44228180B4BB600819E46 /* Model */,
 				3CEFDB34180B4A7200B2B767 /* AppDelegate.h */,
 				3CEFDB35180B4A7200B2B767 /* AppDelegate.m */,
 				3CEFDB37180B4A7200B2B767 /* Images.xcassets */,
@@ -241,6 +259,8 @@
 			files = (
 				3CEFDB36180B4A7200B2B767 /* AppDelegate.m in Sources */,
 				3CEFDB32180B4A7200B2B767 /* main.m in Sources */,
+				3CD4422B180B4BD200819E46 /* LinkedList.m in Sources */,
+				3CD44227180B4B5A00819E46 /* Node.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -441,6 +461,7 @@
 				3CEFDB50180B4A7200B2B767 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		3CEFDB51180B4A7200B2B767 /* Build configuration list for PBXNativeTarget "ios-linked-listTests" */ = {
 			isa = XCConfigurationList;
@@ -449,6 +470,7 @@
 				3CEFDB53180B4A7200B2B767 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
