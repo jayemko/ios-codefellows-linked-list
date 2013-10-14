@@ -7,9 +7,24 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "Node.h"
 
-@interface LinkedList : NSObject
+@interface LinkedList : NSObject{
+    Node *head;
+    int size;
+}
 
-+(LinkedList*)newListWithObject:(id)object;
+//@property (nonatomic, strong) Node *head;
+
+- (id)init;
+- (id)initWithObject:(id)newObject;
++ (id)listWithObject:(id)newObject;
+
+- (int)count;
+- (void)push:(id)newObject;
+- (id)pop;
+- (id)peek;
+- (BOOL)contains:(id)object;
+- (NSString*)description;
 
 @end
