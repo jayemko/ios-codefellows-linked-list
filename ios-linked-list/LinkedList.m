@@ -29,8 +29,8 @@
     return self;
 }
 
-+ (LinkedList*)newListWithHeadNode:(id)object{
-    return [[LinkedList alloc] initWithObject:object];
++ (id)listWithObject:(id)newObject{
+    return [[LinkedList alloc] initWithObject:newObject];
 }
 
 - (int)count{
