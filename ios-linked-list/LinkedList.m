@@ -47,7 +47,7 @@
     size++;
 }
 
-- (id)pop:(id)object{
+- (id)removeObject:(id)object{
     if (size == 0) return nil;
     if (size == 1) {
         id temp = head.object;
@@ -59,7 +59,8 @@
         if ([head.next.object isEqual:object]) {
             return object;
         }else{
-            [self pop:object];
+            size--;
+            [self removeObject:object];
         }
     }
     return nil;
@@ -67,6 +68,26 @@
 
 - (id)peek{
     return head.object;
+}
+
+- (id)pop{
+        id temp = head.object;
+        head = head.next;
+        size--;
+        return temp;
+}
+
+- (NSArray*)allObjects{
+    NSLog(@"allObjects was called");
+    NSMutableArray *tempArray = [[NSMutableArray alloc] initWithCapacity:size];
+    Node *node = nil;
+    
+    for (node = head; node; node = node.next) {
+        [tempArray addObject:node.object];
+    }
+    
+    NSLog(@"tempArray count: %d", [tempArray count]);
+    return [NSArray arrayWithArray:tempArray];
 }
 
 @end

@@ -22,7 +22,9 @@
 
 - (int)count;
 - (void)push:(id)newObject;
-- (id)pop:(id)object;
+- (id)removeObject:(id)object;
+- (id)pop;
 - (id)peek;
+- (NSArray*)allObjects;
 
 @end
