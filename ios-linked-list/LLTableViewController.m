@@ -7,8 +7,11 @@
 //
 
 #import "LLTableViewController.h"
+#import "LinkedList.h"
 
-@interface LLTableViewController ()
+@interface LLTableViewController (){
+    LinkedList *linkedList;
+}
 
 @end
 
@@ -27,25 +30,18 @@
 {
     [super viewDidLoad];
 
-    // Uncomment the following line to preserve selection between presentations.
-    // self.clearsSelectionOnViewWillAppear = NO;
- 
-    // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-    // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+    [self loadLinkedList];
+    NSLog(@"Linked List count: %d", [linkedList count]);
 }
 
 #pragma mark - Table view data source
 
-- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
-{
-    return 0;
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView{
+    return 1;
 }
 
-- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
-{
-#warning Incomplete method implementation.
-    // Return the number of rows in the section.
-    return 0;
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
+    return [linkedList count];
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -53,9 +49,19 @@
     static NSString *CellIdentifier = @"Cell";
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
     
-    // Configure the cell...
+    
     
     return cell;
+}
+
+#pragma mark - Linked List methods
+
+- (void)loadLinkedList{
+    linkedList = [LinkedList listWithObject:@"Red"];
+    NSArray *colorArray = [NSArray arrayWithObjects:@"Blue",@"Green",@"Yellow",@"Orange",@"Purple", nil];
+    for (NSString *colorString in colorArray) {
+        [linkedList push:colorString];
+    }
 }
 
 @end
