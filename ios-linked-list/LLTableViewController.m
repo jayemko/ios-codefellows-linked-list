@@ -11,6 +11,7 @@
 
 @interface LLTableViewController (){
     LinkedList *linkedList;
+    NSArray *lArray;
 }
 
 @end
@@ -31,6 +32,7 @@
     [super viewDidLoad];
 
     [self loadLinkedList];
+    lArray = [linkedList allObjects];
     NSLog(@"Linked List count: %d", [linkedList count]);
 }
 
@@ -50,6 +52,7 @@
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
     
     
+    cell.textLabel.text = [lArray objectAtIndex:indexPath.row];
     
     return cell;
 }
