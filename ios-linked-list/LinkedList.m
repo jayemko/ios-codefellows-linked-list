@@ -47,12 +47,20 @@
     size++;
 }
 
-- (id)pop{
-    if (size) {
+- (id)pop:(id)object{
+    if (size == 0) return nil;
+    if (size == 1) {
         id temp = head.object;
         head = head.next;
         size--;
         return temp;
+    }
+    while (head.next) {
+        if ([head.next.object isEqual:object]) {
+            return object;
+        }else{
+            [self pop:object];
+        }
     }
     return nil;
 }
@@ -60,18 +68,5 @@
 - (id)peek{
     return head.object;
 }
-
-- (BOOL)contains:(id)object{
-    while (head.next) {
-        if ([head.next.object isEqual:object]) {
-            return YES;
-        }else{
-            [self contains:object];
-        }
-    }
-    return NO;
-}
-
-
 
 @end

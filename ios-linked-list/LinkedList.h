@@ -22,9 +22,7 @@
 
 - (int)count;
 - (void)push:(id)newObject;
-- (id)pop;
+- (id)pop:(id)object;
 - (id)peek;
-- (BOOL)contains:(id)object;
-- (NSString*)description;
 
 @end
