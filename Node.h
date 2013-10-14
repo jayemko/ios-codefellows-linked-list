@@ -10,4 +10,10 @@
 
 @interface Node : NSObject
 
+@property (nonatomic, strong) Node *next;
+@property (nonatomic, strong) id object;
+
++ (Node*)newNodeWithObject:(id)object :(Node*)node;
+
+
 @end

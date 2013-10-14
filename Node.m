@@ -10,4 +10,11 @@
 
 @implementation Node
 
++ (Node*)newNodeWithObject:(id)object :(Node*)node{
+    Node *newNode = [[Node alloc]init];
+    newNode.next = node;
+    newNode.object = object;
+    return newNode;
+}
+
 @end
